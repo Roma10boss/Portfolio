@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #0A0A0A, #1C1C1C);
+    color: white;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Bar */
+header {
+    background: #1c1c1c;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00FFFF;
+}
+
+/* Hero Section */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 0 100px;
+    position: relative;
+}
+
+/* Text Section */
+.text-section {
+    max-width: 600px;
+}
+
+.text-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-section h2 {
+    font-size: 2.5rem;
+    color: #00FFFF;
+    margin: 10px 0;
+}
+
+.text-section h3 {
+    font-size: 1.5rem;
+    color: #00FFFF;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 1rem;
+    color: #CCCCCC;
+    margin-bottom: 30px;
+}
+
+.text-section .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #00FFFF;
+    color: #000;
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.text-section .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+}
+
+/* Seamless Photo Section */
+.image-section {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(135deg, #1c1c1c, #333333);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+/* Smooth Hover Effects on Image */
+.image-section:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 1);
+    z-index: 10;
+}
+
+/* Glossy Overlay */
+.image-section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
+/* Photo Inside the Hexagon */
+.image-section img {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 10%;
+    transition: transform 0.3s ease;
+}
