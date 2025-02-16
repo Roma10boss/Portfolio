@@ -65,6 +65,7 @@ nav ul li a:hover {
 .text-section h1 {
     font-size: 3rem;
     font-weight: bold;
+    color: #57243c;
     margin-bottom: 10px;
 }
 
@@ -82,8 +83,9 @@ nav ul li a:hover {
 
 .text-section p {
     font-size: 1rem;
-    color: #CCCCCC;
+    color: #fdbb06;
     margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 .text-section .btn {
